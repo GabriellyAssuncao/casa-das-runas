@@ -1,0 +1,36 @@
+version: "3"
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    networks:
+      - app-network
+  frontend:
+    image: casa-das-runas-frontend
+    build:
+      context: ../casa-das-runas-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=my_username
+      - POSTGRES_PASSWORD=my_password
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
