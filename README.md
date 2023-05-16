@@ -1,9 +1,10 @@
-# README
+# Casa da Runas
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Projeto para a matéria de Desenvolvimento de Software do curso de Engenharia de Software da Universidade de Brasília.
 
-Things you may want to cover:
+## Como Executar o projeto
+
+### Tutorial de instalação do docker e docker compose
 
 * Ruby version
 
