@@ -4,6 +4,14 @@ Projeto para a matéria de Desenvolvimento de Software do curso de Engenharia de
 
 ## Como Executar o projeto
 
+Certifique-se de ter o docker e o docker-compose instalados na sua máquina
+
+Clonar os repositórios:
+
+Executar o comando:
+
+`docker-compose up`
+
 ### Tutorial de instalação do docker e docker compose
 
 * Ruby version
