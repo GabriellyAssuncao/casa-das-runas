@@ -8,7 +8,11 @@ Certifique-se de ter o docker e o docker-compose instalados na sua máquina
 
 Clonar os repositórios:
 
-Executar o comando:
+- [Casa das Runas Frontend](https://github.com/GabriellyAssuncao/casa-das-runas-frontend)
+
+- [Casa das Runas Backend](https://github.com/GabriellyAssuncao/casa-das-runas)
+
+Dentro do diretório 'casa-das-runas' executar o comando:
 
 `docker-compose up`
 
