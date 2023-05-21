@@ -13,7 +13,8 @@ RUN gem install bundler
 RUN bundle install --jobs 20 --retry 5
 
 # Copia o restante dos arquivos da aplicação
-COPY . .
+COPY . /app
+
 
 # Configurações de ambiente
 # ENV RAILS_ENV=production

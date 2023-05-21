@@ -8,6 +8,8 @@ services:
       - "3000:3000"
     depends_on:
       - db
+    volumes:
+    - '.:/app'
     networks:
       - app-network
   frontend:
@@ -22,9 +24,9 @@ services:
   db:
     image: postgres
     ports:
-      - "5432:5432"
+      - "5431:5432"
     volumes:
-      - ./pgdata:/var/lib/postgresql/data
+      - ./pgdata:/var/lib/postgresql/data:rw
     environment:
       - POSTGRES_USER=my_username
       - POSTGRES_PASSWORD=my_password
