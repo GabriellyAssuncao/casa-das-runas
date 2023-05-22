@@ -1,6 +1,8 @@
 # Casa da Runas
 
-Projeto para a matéria de Desenvolvimento de Software do curso de Engenharia de Software da Universidade de Brasília.
+Adentre em nosso estabelecimento encantado e descubra um mundo de maravilhas alquímicas. Aqui, os segredos da arte da criação de poções são revelados, e você terá acesso a uma vasta variedade de ingredientes raros e poderosos.
+
+Casa das Runas trata-se de um e-commerce com tema medieval. É um projeto densenvolvido por alunos de engenharia de software da Universidade de Brasĺlia.
 
 ## Como Executar o projeto
 
@@ -14,24 +16,9 @@ Clonar os repositórios:
 
 Dentro do diretório 'casa-das-runas' executar o comando:
 
-`docker-compose up`
+`docker compose up`
 
 ### Tutorial de instalação do docker e docker compose
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Docker: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
+Docker-compose: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04
