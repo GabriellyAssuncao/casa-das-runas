@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_03_164912) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_03_165946) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -33,10 +33,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_03_164912) do
   end
 
   create_table "purchase_order_details", force: :cascade do |t|
-    t.integer "product_id"
-    t.integer "purchase_order_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "product_id"
+    t.bigint "purchase_order_id"
+    t.index ["product_id"], name: "index_purchase_order_details_on_product_id"
+    t.index ["purchase_order_id"], name: "index_purchase_order_details_on_purchase_order_id"
   end
 
   create_table "purchase_orders", force: :cascade do |t|
@@ -44,6 +46,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_03_164912) do
     t.float "total_amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "client_id"
+    t.index ["client_id"], name: "index_purchase_orders_on_client_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -54,4 +58,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_03_164912) do
     t.string "password"
   end
 
+  add_foreign_key "purchase_order_details", "products"
+  add_foreign_key "purchase_order_details", "purchase_orders"
+  add_foreign_key "purchase_orders", "clients"
 end
