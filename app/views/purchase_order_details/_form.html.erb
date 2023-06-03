@@ -1,0 +1,17 @@
+<%= form_with(model: purchase_order_detail) do |form| %>
+  <% if purchase_order_detail.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(purchase_order_detail.errors.count, "error") %> prohibited this purchase_order_detail from being saved:</h2>
+
+      <ul>
+        <% purchase_order_detail.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
